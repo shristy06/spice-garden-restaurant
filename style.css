@@ -1,0 +1,1401 @@
+/* =====================================================
+   SPICE GARDEN RESTAURANT
+   MAIN STYLESHEET
+===================================================== */
+
+
+/* =====================================================
+   1. GOOGLE FONT
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =====================================================
+   2. GLOBAL VARIABLES
+===================================================== */
+
+:root {
+
+    --primary-color: #c88924;
+    --primary-dark: #9d6412;
+
+    --dark-color: #1d1712;
+    --dark-light: #30251d;
+
+    --cream-color: #fff8ed;
+    --white-color: #ffffff;
+
+    --text-color: #5f574f;
+    --light-text: #8a8178;
+
+    --border-color: #eadfce;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    --transition:
+        all 0.3s ease;
+}
+
+
+/* =====================================================
+   3. RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--white-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+/* =====================================================
+   4. CONTAINER
+===================================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   5. HEADINGS
+===================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display", serif;
+    color: var(--dark-color);
+    line-height: 1.25;
+}
+
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+
+h3 {
+    font-size: 1.4rem;
+}
+
+
+/* =====================================================
+   6. HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+    background: var(--white-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+
+.logo span {
+    color: var(--primary-color);
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.navbar a {
+    position: relative;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Active Navigation */
+
+.navbar a.active {
+    color: var(--primary-color);
+}
+
+
+.navbar a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--primary-color);
+}
+
+
+/* Navigation Button */
+
+.nav-btn {
+    padding: 11px 20px;
+
+    background: var(--primary-color);
+    color: var(--white-color) !important;
+
+    border-radius: 5px;
+}
+
+
+.nav-btn:hover {
+    background: var(--primary-dark);
+}
+
+
+/* Mobile Menu */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    color: var(--dark-color);
+}
+
+
+/* =====================================================
+   7. HERO SECTION
+===================================================== */
+
+.hero {
+    min-height: 700px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        url("../images/restaurant.jpg")
+        center/cover no-repeat;
+}
+
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 13, 8, 0.88),
+            rgba(20, 13, 8, 0.55),
+            rgba(20, 13, 8, 0.25)
+        );
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    color: var(--white-color);
+
+    max-width: 760px;
+}
+
+
+.hero-subtitle,
+.section-subtitle {
+    color: var(--primary-color);
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 12px;
+}
+
+
+.hero h1 {
+    color: var(--white-color);
+
+    margin-bottom: 22px;
+}
+
+
+.hero h1 span {
+    color: var(--primary-color);
+    display: block;
+}
+
+
+.hero-description {
+    max-width: 650px;
+
+    color: #f1e9df;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   8. BUTTONS
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+.secondary-btn {
+    background: transparent;
+
+    color: var(--white-color);
+
+    border: 1px solid var(--white-color);
+}
+
+
+.secondary-btn:hover {
+    background: var(--white-color);
+    color: var(--dark-color);
+}
+
+
+/* =====================================================
+   9. SECTIONS
+===================================================== */
+
+.section {
+    padding: 90px 0;
+}
+
+
+.section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 15px;
+}
+
+
+.section-heading > p:last-child {
+    color: var(--text-color);
+}
+
+
+/* =====================================================
+   10. ABOUT SECTION
+===================================================== */
+
+.about-preview {
+    background: var(--cream-color);
+}
+
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.about-image {
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.about-image img {
+    height: 500px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   11. FOOD GRID
+===================================================== */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.food-card {
+    background: var(--white-color);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+
+.food-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.food-card img {
+    height: 230px;
+
+    object-fit: cover;
+}
+
+
+.food-card-content {
+    padding: 22px;
+}
+
+
+.food-card-content h3 {
+    margin-bottom: 10px;
+}
+
+
+.food-card-content p {
+    font-size: 0.92rem;
+
+    color: var(--text-color);
+
+    margin-bottom: 15px;
+}
+
+
+.price {
+    color: var(--primary-color);
+
+    font-weight: 700;
+
+    font-size: 1.1rem;
+}
+
+
+.food-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.small-btn {
+    padding: 7px 14px;
+
+    border: 1px solid var(--primary-color);
+
+    color: var(--primary-color);
+
+    border-radius: 4px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.small-btn:hover {
+    background: var(--primary-color);
+
+    color: var(--white-color);
+}
+
+
+.center-button {
+    text-align: center;
+
+    margin-top: 45px;
+}
+
+
+/* =====================================================
+   12. FEATURES
+===================================================== */
+
+.features {
+    background: var(--cream-color);
+}
+
+
+.features-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.feature-card {
+    background: var(--white-color);
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #fff0d6;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+}
+
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+
+.feature-card p {
+    font-size: 0.92rem;
+}
+
+
+/* =====================================================
+   13. PAGE HERO
+===================================================== */
+
+.page-hero {
+    min-height: 350px;
+
+    background:
+        linear-gradient(
+            rgba(30, 20, 10, 0.75),
+            rgba(30, 20, 10, 0.75)
+        ),
+        url("../images/restaurant.jpg")
+        center/cover no-repeat;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.page-hero-content {
+    color: var(--white-color);
+}
+
+
+.page-hero h1 {
+    color: var(--white-color);
+
+    margin-bottom: 15px;
+}
+
+
+.page-hero h1 span {
+    color: var(--primary-color);
+}
+
+
+.page-hero p:last-child {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #f5eee5;
+}
+
+
+/* =====================================================
+   14. MENU FILTER
+===================================================== */
+
+.menu-filter {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+}
+
+
+.filter-btn {
+    border: 1px solid var(--border-color);
+
+    background: var(--white-color);
+
+    color: var(--dark-color);
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    border-color: var(--primary-color);
+}
+
+
+/* =====================================================
+   15. MENU GRID
+===================================================== */
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.menu-card {
+    background: var(--white-color);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: var(--transition);
+}
+
+
+.menu-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.menu-image {
+    position: relative;
+}
+
+
+.menu-image img {
+    height: 250px;
+
+    object-fit: cover;
+}
+
+
+.menu-badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    padding: 5px 10px;
+
+    border-radius: 4px;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+}
+
+
+.menu-card-content {
+    padding: 22px;
+}
+
+
+.menu-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+
+
+.menu-title h3 {
+    font-size: 1.2rem;
+}
+
+
+.menu-title .price {
+    white-space: nowrap;
+}
+
+
+.menu-card-content p {
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   16. MENU OFFER
+===================================================== */
+
+.menu-offer {
+    padding: 80px 0;
+
+    background:
+        linear-gradient(
+            rgba(30, 20, 10, 0.82),
+            rgba(30, 20, 10, 0.82)
+        ),
+        url("../images/restaurant.jpg")
+        center/cover no-repeat;
+
+    text-align: center;
+
+    color: var(--white-color);
+}
+
+
+.offer-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.offer-content h2 {
+    color: var(--white-color);
+
+    margin-bottom: 15px;
+}
+
+
+.offer-content p {
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   17. MISSION & VISION
+===================================================== */
+
+.mission-section {
+    background: var(--cream-color);
+}
+
+
+.mission-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+.mission-card {
+    background: var(--white-color);
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.mission-icon {
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+}
+
+
+.mission-card h3 {
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   18. CHEFS
+===================================================== */
+
+.chef-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.chef-card {
+    background: var(--white-color);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+
+.chef-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.chef-image img {
+    height: 350px;
+
+    object-fit: cover;
+}
+
+
+.chef-content {
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+.chef-content h3 {
+    margin-bottom: 5px;
+}
+
+
+.chef-role {
+    color: var(--primary-color);
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   19. STATS
+===================================================== */
+
+.stats-section {
+    padding: 70px 0;
+
+    background: var(--dark-color);
+}
+
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+
+.stat-card {
+    text-align: center;
+
+    color: var(--white-color);
+}
+
+
+.stat-number {
+    color: var(--primary-color);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 3rem;
+
+    font-weight: 700;
+}
+
+
+.stat-card p {
+    color: #ddd3c8;
+}
+
+
+/* =====================================================
+   20. CTA
+===================================================== */
+
+.cta {
+    padding: 90px 0;
+
+    text-align: center;
+
+    background: var(--cream-color);
+}
+
+
+.cta-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.cta-content h2 {
+    margin-bottom: 15px;
+}
+
+
+.cta-content > p:not(.section-subtitle) {
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   21. FOOTER
+===================================================== */
+
+.footer {
+    background: var(--dark-color);
+
+    color: #d9d0c7;
+}
+
+
+.footer-grid {
+    padding: 70px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1.5fr 1fr;
+
+    gap: 40px;
+}
+
+
+.footer h3 {
+    color: var(--white-color);
+
+    margin-bottom: 18px;
+}
+
+
+.footer h3 span {
+    color: var(--primary-color);
+}
+
+
+.footer p {
+    font-size: 0.9rem;
+
+    margin-bottom: 8px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+}
+
+
+.footer-links a {
+    transition: var(--transition);
+}
+
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   22. RESPONSIVE DESIGN - TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .navbar {
+        gap: 18px;
+    }
+
+
+    .food-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .features-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .menu-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+        row-gap: 40px;
+    }
+
+}
+
+
+/* =====================================================
+   23. RESPONSIVE DESIGN - MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .navbar {
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--white-color);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+        gap: 18px;
+    }
+
+
+    .navbar.show {
+        display: flex;
+    }
+
+
+    .navbar a {
+        width: 100%;
+    }
+
+
+    .navbar a.active::after {
+        display: none;
+    }
+
+
+    .nav-btn {
+        text-align: center;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .hero-content {
+        text-align: center;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    /* About */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .about-image img {
+        height: 350px;
+    }
+
+
+    /* Food */
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Features */
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Menu */
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .menu-filter {
+        gap: 8px;
+    }
+
+
+    .filter-btn {
+        padding: 8px 14px;
+
+        font-size: 0.85rem;
+    }
+
+
+    /* Mission */
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Chefs */
+
+    .chef-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .chef-image img {
+        height: 400px;
+    }
+
+
+    /* Stats */
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+
+    .footer-links {
+        align-items: center;
+    }
+
+}
+
+
+/* =====================================================
+   24. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    .section {
+        padding: 65px 0;
+    }
+
+
+    .hero {
+        min-height: 560px;
+    }
+
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+
+    .btn {
+        padding: 11px 18px;
+
+        font-size: 0.9rem;
+    }
+
+
+    .page-hero {
+        min-height: 300px;
+    }
+
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+
+    .chef-image img {
+        height: 350px;
+    }
+
+}

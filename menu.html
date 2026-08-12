@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore the delicious menu at Spice Garden Restaurant including Indian starters, main courses, biryani, desserts and beverages.">
+
+    <title>Spice Garden | Menu</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <!-- Logo -->
+
+            <a href="home.html" class="logo">
+                Spice <span>Garden</span>
+            </a>
+
+
+            <!-- Mobile Menu -->
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu">
+                ☰
+            </button>
+
+
+            <!-- Navigation -->
+
+            <nav class="navbar" id="navbar">
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="menu.html" class="active">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="contact.html"
+                   class="nav-btn">
+                    Book a Table
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="container page-hero-content">
+
+            <p class="hero-subtitle">
+                Discover Our Flavors
+            </p>
+
+            <h1>
+                Our <span>Menu</span>
+            </h1>
+
+            <p>
+                Enjoy authentic Indian dishes prepared
+                with fresh ingredients and traditional spices.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MENU SECTION ================= -->
+
+    <main>
+
+        <section class="menu-section section">
+
+            <div class="container">
+
+
+                <!-- Section Heading -->
+
+                <div class="section-heading">
+
+                    <p class="section-subtitle">
+                        Fresh & Delicious
+                    </p>
+
+                    <h2>
+                        Explore Our Menu
+                    </h2>
+
+                    <p>
+                        From flavorful starters to delicious
+                        desserts, there is something for everyone.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= MENU FILTER ================= -->
+
+                <div class="menu-filter">
+
+                    <button class="filter-btn active"
+                            data-category="all">
+                        All
+                    </button>
+
+                    <button class="filter-btn"
+                            data-category="starter">
+                        Starters
+                    </button>
+
+                    <button class="filter-btn"
+                            data-category="main">
+                        Main Course
+                    </button>
+
+                    <button class="filter-btn"
+                            data-category="biryani">
+                        Biryani
+                    </button>
+
+                    <button class="filter-btn"
+                            data-category="dessert">
+                        Desserts
+                    </button>
+
+                    <button class="filter-btn"
+                            data-category="beverage">
+                        Beverages
+                    </button>
+
+                </div>
+
+
+
+                <!-- ================= FOOD GRID ================= -->
+
+                <div class="menu-grid" id="menuGrid">
+
+
+
+                    <!-- MENU ITEM 1 -->
+
+                    <article class="menu-card"
+                             data-category="starter">
+
+                        <div class="menu-image">
+
+                            <img src="images/samosa.jpg"
+                                 alt="Crispy Indian samosa"
+                                 loading="lazy">
+
+                            <span class="menu-badge">
+                                Popular
+                            </span>
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Crispy Samosa
+                                </h3>
+
+                                <span class="price">
+                                    ₹99
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Crispy golden pastry filled with
+                                spiced potatoes and peas.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 2 -->
+
+                    <article class="menu-card"
+                             data-category="starter">
+
+                        <div class="menu-image">
+
+                            <img src="images/pakora.jpg"
+                                 alt="Mixed vegetable pakora"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Vegetable Pakora
+                                </h3>
+
+                                <span class="price">
+                                    ₹129
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Crispy vegetable fritters served
+                                with mint and tamarind chutney.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 3 -->
+
+                    <article class="menu-card"
+                             data-category="main">
+
+                        <div class="menu-image">
+
+                            <img src="images/paneer.jpg"
+                                 alt="Paneer butter masala"
+                                 loading="lazy">
+
+                            <span class="menu-badge">
+                                Chef's Choice
+                            </span>
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Paneer Butter Masala
+                                </h3>
+
+                                <span class="price">
+                                    ₹249
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Soft paneer cooked in a rich,
+                                creamy tomato-based gravy.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 4 -->
+
+                    <article class="menu-card"
+                             data-category="main">
+
+                        <div class="menu-image">
+
+                            <img src="images/dal.jpg"
+                                 alt="Dal Tadka"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Dal Tadka
+                                </h3>
+
+                                <span class="price">
+                                    ₹179
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Yellow lentils tempered with
+                                aromatic spices and fresh herbs.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 5 -->
+
+                    <article class="menu-card"
+                             data-category="biryani">
+
+                        <div class="menu-image">
+
+                            <img src="images/biryani.jpg"
+                                 alt="Chicken biryani"
+                                 loading="lazy">
+
+                            <span class="menu-badge">
+                                Bestseller
+                            </span>
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Chicken Biryani
+                                </h3>
+
+                                <span class="price">
+                                    ₹299
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Fragrant basmati rice cooked with
+                                tender chicken and aromatic spices.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 6 -->
+
+                    <article class="menu-card"
+                             data-category="biryani">
+
+                        <div class="menu-image">
+
+                            <img src="images/veg-biryani.jpg"
+                                 alt="Vegetable biryani"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Vegetable Biryani
+                                </h3>
+
+                                <span class="price">
+                                    ₹229
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Basmati rice cooked with fresh
+                                vegetables and fragrant spices.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 7 -->
+
+                    <article class="menu-card"
+                             data-category="biryani">
+
+                        <div class="menu-image">
+
+                            <img src="images/mutton-biryani.jpg"
+                                 alt="Mutton biryani"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Mutton Biryani
+                                </h3>
+
+                                <span class="price">
+                                    ₹379
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Tender mutton layered with basmati
+                                rice and traditional biryani spices.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 8 -->
+
+                    <article class="menu-card"
+                             data-category="dessert">
+
+                        <div class="menu-image">
+
+                            <img src="images/gulab-jamun.jpg"
+                                 alt="Gulab jamun dessert"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Gulab Jamun
+                                </h3>
+
+                                <span class="price">
+                                    ₹129
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Soft and warm milk-solid dumplings
+                                served in sweet sugar syrup.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 9 -->
+
+                    <article class="menu-card"
+                             data-category="dessert">
+
+                        <div class="menu-image">
+
+                            <img src="images/kheer.jpg"
+                                 alt="Traditional Indian kheer"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Traditional Kheer
+                                </h3>
+
+                                <span class="price">
+                                    ₹119
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Creamy rice pudding prepared with
+                                milk, cardamom and dry fruits.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 10 -->
+
+                    <article class="menu-card"
+                             data-category="beverage">
+
+                        <div class="menu-image">
+
+                            <img src="images/lassi.jpg"
+                                 alt="Fresh mango lassi"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Mango Lassi
+                                </h3>
+
+                                <span class="price">
+                                    ₹109
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Refreshing creamy yogurt drink
+                                blended with ripe mangoes.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 11 -->
+
+                    <article class="menu-card"
+                             data-category="beverage">
+
+                        <div class="menu-image">
+
+                            <img src="images/masala-tea.jpg"
+                                 alt="Indian masala tea"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Masala Tea
+                                </h3>
+
+                                <span class="price">
+                                    ₹69
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Traditional Indian tea prepared
+                                with milk and aromatic spices.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MENU ITEM 12 -->
+
+                    <article class="menu-card"
+                             data-category="beverage">
+
+                        <div class="menu-image">
+
+                            <img src="images/cold-coffee.jpg"
+                                 alt="Cold coffee"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Cold Coffee
+                                </h3>
+
+                                <span class="price">
+                                    ₹139
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Chilled creamy coffee topped with
+                                delicious foam.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SPECIAL OFFER ================= -->
+
+        <section class="menu-offer">
+
+            <div class="container offer-content">
+
+                <p class="section-subtitle">
+                    Special Offer
+                </p>
+
+                <h2>
+                    Enjoy 15% Off Your First Visit
+                </h2>
+
+                <p>
+                    Book your table today and enjoy an amazing
+                    dining experience with your loved ones.
+                </p>
+
+                <a href="contact.html"
+                   class="btn primary-btn">
+                    Book Your Table
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- About -->
+
+            <div class="footer-about">
+
+                <h3>
+                    Spice <span>Garden</span>
+                </h3>
+
+                <p>
+                    Authentic Indian flavors, warm hospitality
+                    and memorable dining experiences.
+                </p>
+
+            </div>
+
+
+            <!-- Links -->
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📍 City Center, India
+                </p>
+
+                <p>
+                    📞 +91 98765 12345
+                </p>
+
+                <p>
+                    ✉️ hello@spicegarden.com
+                </p>
+
+            </div>
+
+
+            <!-- Opening Hours -->
+
+            <div class="footer-hours">
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+                <p>
+                    Monday - Friday
+                </p>
+
+                <p>
+                    11:00 AM - 10:30 PM
+                </p>
+
+                <p>
+                    Saturday - Sunday
+                </p>
+
+                <p>
+                    10:00 AM - 11:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Spice Garden Restaurant.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
